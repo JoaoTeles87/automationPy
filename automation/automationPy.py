@@ -1,6 +1,14 @@
 import pyautogui
 import time
+import random
 
+
+# Gerar e clicar em uma posição aleatória dentro dos jogo da velha
+xMin, xMax = 437, 582  # Limites x (mínimo e máximo)
+yMin, yMax = 489, 647  # Limites y (mínimo e máximo)
+
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
 
 pyautogui.PAUSE = 0.5 #o tempo de execução entre um comando e outro
 
@@ -11,30 +19,46 @@ pyautogui.press("enter")
 pyautogui.click(x=981, y=320)
 pyautogui.click(x=967, y=324)
 pyautogui.press("enter")
+
 time.sleep(2)
 pyautogui.click(296, 63)
 pyautogui.press("enter")
 pyautogui.write("jogo da velha google")
-pyautogui.press("enter")  
+pyautogui.press("enter") 
+ 
 time.sleep(2)
-pyautogui.click(508, 589)
-time.sleep(2)
-pyautogui.click(437, 647)
-time.sleep(2)
-pyautogui.click(506, 585)
-time.sleep(2)
-pyautogui.click(525, 489)
+pyautogui.click(random_x, random_y)
 
-time.sleep(2)
-pyautogui.click(496, 571)
-time.sleep(2)
-pyautogui.click(582, 514)
-time.sleep(2)
-pyautogui.click(499, 524)
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+time.sleep(1)
+pyautogui.click(random_x, random_y)
 
-f,g = pyautogui.position()
-print(f'A posição do cursor do mouse é: ({f}, {g})')
-time.sleep(2)
-r, u = pyautogui.position()
-print(f'A posição do cursor do mouse é: ({r}, {u})')
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+time.sleep(1)
+pyautogui.click(random_x, random_y)
+
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+time.sleep(1)
+pyautogui.click(random_x, random_y)
+
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+time.sleep(1)
+pyautogui.click(random_x, random_y)
+
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+time.sleep(1)
+pyautogui.click(random_x, random_y)
+
+random_x = random.randint(xMin, xMax)
+random_y = random.randint(yMin, yMax)
+
+time.sleep(1)
+pyautogui.click(random_x, random_y)
+
+
 
